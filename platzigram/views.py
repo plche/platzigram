@@ -40,3 +40,12 @@ def sort_integers(request):
     # Otra opción para la respuesta JSON
     return JsonResponse(data, safe=False, json_dumps_params={'indent': 4})
 
+
+def say_hi(request, name, age):
+    """Return a greeting."""
+    # name and age params are passed in the URL
+    if age < 12:
+        message = 'Sorry {}, you are not allowed here'.format(name)
+    else:
+        message = 'Hello, {}! Welcome to Platzigram'.format(name)
+    return HttpResponse(message)
