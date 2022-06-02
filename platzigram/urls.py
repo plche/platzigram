@@ -1,5 +1,7 @@
 """platzigram URLs module."""
 
+# Django
+from django.contrib import admin
 from django.urls import path
 
 # Para mejor organización y estructuración es preferible renombrar las vistas
@@ -8,6 +10,8 @@ from posts import views as posts_views
 
 
 urlpatterns = [
+
+    path('admin/', admin.site.urls),
 
     path('hello-world/', local_views.hello_world),
     path('sorted/', local_views.sort_integers),
