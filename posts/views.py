@@ -52,4 +52,4 @@ def list_posts(request):
     #         """.format(**post))
     #     # **post es equivalente a name=post['name']...etc, es decir, desempaquetamos el dict post
     # return HttpResponse('<br>'.join(content))
-    return render(request, 'feed.html', {'posts': posts})
+    return render(request, 'posts/feed.html', {'posts': posts})
